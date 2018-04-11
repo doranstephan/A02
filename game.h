@@ -123,7 +123,7 @@ int intelligent_selection(game* g);
 int diago1(int i, int j, int incr);
 int diago2(int i, int j);
 void print_tab(game* g);
-
+int clean_input();
 #endif
 
 

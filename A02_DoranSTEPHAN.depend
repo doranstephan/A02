@@ -1,16 +1,16 @@
 # depslib dependency file v1.0
-1523467140 source:c:\users\doran\documents\c-citlabs\a02\a02_doranstephan\main.c
+1523485135 source:c:\users\doran\documents\c-citlabs\a02\a02_doranstephan\main.c
 	<time.h>
 	"game.h"
 	<string.h>
 
-1523485058 c:\users\doran\documents\c-citlabs\a02\a02_doranstephan\game.h
+1523486035 c:\users\doran\documents\c-citlabs\a02\a02_doranstephan\game.h
 	<time.h>
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1523485048 source:c:\users\doran\documents\c-citlabs\a02\a02_doranstephan\game.c
+1523485721 source:c:\users\doran\documents\c-citlabs\a02\a02_doranstephan\game.c
 	"game.h"
 	<math.h>
 	<stdio.h>

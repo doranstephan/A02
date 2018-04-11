@@ -768,11 +768,20 @@ int intelligent_selection(game* g) {
 
 int my_get_int(){
     int i=-1;
-    scanf("%d", &i);
+    char c;
+
+    do
+    {
+
+    } while (((scanf("%d%c", &i, &c)!=2 || c!='\n') && clean_input()));
     return i;
 }
 
-
+int clean_input()
+{
+    while (getchar()!='\n');
+    return 1;
+}
 
 
 
