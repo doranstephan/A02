@@ -27,11 +27,11 @@ int main(int argc, char* argv[]) {
 	//2.2. The second argument is the name of the second player
 	//char* p2 = (char*)malloc(strlen(argv[2]) + 1 * sizeof(char));
 	//strcpy(p2, argv[2]);
-	char* p2 = "Computer";
+	char* p2 = "Don";
 
 	//2.3. The third argument is 0 for non-intelligent machine or 1 for intelligent
 	//int im = atoi(argv[3]);
-	int im = 1;
+	int im = 0;
 
 	//3. We call to the main function of the game
 	play_game(p1, p2, im);

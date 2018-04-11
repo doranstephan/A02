@@ -357,11 +357,7 @@ int computer_get_movement_index(game* g) {
             printf("res:%d\n",res);
         }
         else{
-            if(IACHOICE==1)
-                res= intelligent_selection(g);
-            else
-                res=IAmove(g);
-
+            res= intelligent_selection(g);
         }
         if (is_position_empty(g,res))
                 b=True;

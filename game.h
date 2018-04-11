@@ -4,8 +4,7 @@
 //------------------------------------
 #ifndef _GAME_
 #define _GAME_
-#define SIZE 2
-#define IACHOICE 2
+#define SIZE 3
 #define _CRT_SECURE_NO_WARNINGS
 
 //------------------------------------
