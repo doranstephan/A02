@@ -5,6 +5,27 @@
 #include "game.h"
 #include <math.h>
 #include <stdio.h>
+
+
+int my_get_int(){
+    int i=-1;
+    char c;
+
+    do
+    {
+
+    } while (((scanf("%d%c", &i, &c)!=2 || c!='\n') && clean_input()));
+    return i;
+}
+
+int clean_input()
+{
+    while (getchar()!='\n');
+    return 1;
+}
+
+
+
 //---------------------------------------------
 //	01. FUNCTION create_new_game (IMPLEMENTED)
 //---------------------------------------------
@@ -106,11 +127,11 @@ game* create_new_game(char* p1, char* p2, int im) {
                 (*res).avenue_positions[i][j]= (i-SIZE)+increment;
             else{
                 if (diag1<SIZE){
-                    (*res).avenue_positions[i][j]= diago1(i,j,increment);
+                    (*res).avenue_positions[i][j]= j+increment;
                     diag1++;
                     }
                 else
-                    (*res).avenue_positions[i][j]= diago2(i,j);
+                    (*res).avenue_positions[i][j]= 2*j+2;
             }
             increment+=SIZE;
             compteur++;
@@ -129,14 +150,7 @@ game* create_new_game(char* p1, char* p2, int im) {
 	return res;
 }
 
-int diago1(int i, int j,int incr)
-{
-    return j+incr;
-}
-int diago2(int i,int j)
-{
-    return 2*j+2;
-}
+
 //-------------------------------------
 //	02. FUNCTION display_board_content
 //-------------------------------------
@@ -354,7 +368,6 @@ int computer_get_movement_index(game* g) {
 	while(b!=True){
         if(!g->intelligent_machine){
             res = gen_num(0,SIZE*SIZE);
-            printf("res:%d\n",res);
         }
         else{
             res= intelligent_selection(g);
@@ -747,7 +760,7 @@ int intelligent_selection(game* g) {
     {
         if(is_position_empty(g,i)){
             int score = get_position_points(g,i);
-            if (score>max_points&& score!=8){
+            if (score>max_points){
                 res=i;
                 max_points=score;
             }
@@ -765,24 +778,6 @@ int intelligent_selection(game* g) {
 	//4. We return res
 	return res;
 }
-
-int my_get_int(){
-    int i=-1;
-    char c;
-
-    do
-    {
-
-    } while (((scanf("%d%c", &i, &c)!=2 || c!='\n') && clean_input()));
-    return i;
-}
-
-int clean_input()
-{
-    while (getchar()!='\n');
-    return 1;
-}
-
 
 
 

@@ -22,16 +22,16 @@ int main(int argc, char* argv[]) {
 	//2.1. The first argument is the name of the first player
 	//char* p1 = (char*)malloc(strlen(argv[1]) + 1 * sizeof(char));
 	//strcpy(p1, argv[1]);
-	char* p1 = "John";
+	char* p1 = "Computer";
 
 	//2.2. The second argument is the name of the second player
 	//char* p2 = (char*)malloc(strlen(argv[2]) + 1 * sizeof(char));
 	//strcpy(p2, argv[2]);
-	char* p2 = "Don";
+	char* p2 = "f";
 
 	//2.3. The third argument is 0 for non-intelligent machine or 1 for intelligent
 	//int im = atoi(argv[3]);
-	int im = 0;
+	int im = 1;
 
 	//3. We call to the main function of the game
 	play_game(p1, p2, im);
